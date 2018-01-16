@@ -6,6 +6,6 @@
  *
  */
 Route::group(['prefix' => 'moduleone', 'namespace' => 'App\Modules\ModuleOne\Controllers'], function () {
-	Route::get('/', ['as' => 'moduleone.index', 'uses' => 'ModuleOneController@index']);
-	Route::get('modeltest', ['as' => 'moduleone.modelTest', 'uses' => 'ModuleOneController@modelTest']);
+	Route::get('/', 'ModuleOneController@index')->name('moduleone.index');
+	Route::get('modeltest', 'ModuleOneController@modelTest')->name('moduleone.modelTest');
 });
